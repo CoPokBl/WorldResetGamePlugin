@@ -1,0 +1,10 @@
+main: net.copokbl.worldresetgame.Main
+name: WorldResetGame
+version: 1.0.0
+
+commands:
+  worldreset:
+    description: Main command for the WorldResetGame plugin
+
+
+
