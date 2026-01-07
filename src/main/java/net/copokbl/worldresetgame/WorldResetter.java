@@ -10,6 +10,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class WorldResetter {
     private final long seed;
@@ -99,7 +100,9 @@ public class WorldResetter {
 //            }
 
             // recreate game world
-            WorldSet ws = new WorldSet(worldName + "_reset_" + currentReset, seed);
+
+            // make seed random
+            WorldSet ws = new WorldSet(worldName + "_reset_" + currentReset, ThreadLocalRandom.current().nextLong());
 //            WorldCreator wc = new WorldCreator(worldName);
 //            wc.environment(World.Environment.NORMAL);
 //            wc.seed(seed);
